@@ -1,0 +1,159 @@
+ /* General  */
+
+
+/* Font */
+
+*, html{
+    font-family: sans-serif
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    margin: 0;
+}
+
+h2{
+    color: white;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+p{
+    margin: 0 0 0 15px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+nav a {
+    font-size: 40px ;
+    color: #D63522;
+    text-decoration: none;
+    }
+
+
+.Element ul{
+    font-size: 20px ;
+    color: lightgrey;
+    list-style: none; 
+    padding: 0;
+}
+
+ /* En Tete */
+
+header{    
+    height: 200px;
+    display: flex;
+    justify-content: space-between; 
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;  
+}
+
+#Menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;    
+}
+nav a {
+    margin: 0 15px 5px 0
+}
+
+#Language{
+    display: flex;
+    justify-content: flex-end
+}
+#Eng{
+    margin: 10px;
+    height: 35px;
+    width: 36px;
+    background-image: url('sprite.png');
+    background-position: -42px -35px ;  
+}
+#Fr{
+    margin: 10px;
+    height: 35px;
+    width: 35px;
+    background-image: url('sprite.png');
+    background-position: -201px -35px ;  
+}
+
+
+/* Bannière */
+#Bannière {    
+    box-sizing: border-box;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Article PUB  */
+
+article{
+    display: flex
+}
+
+.Pub{
+    width: 100%;
+    margin: 30px 0
+}
+.Pub img{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+
+}
+
+
+/* Pied de Page */
+footer{
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    background-color: black
+}
+
+.Element{
+    padding: 15px;
+}
+
+/* Format Téléphone */
+
+@media(max-width: 480px){
+*, html{
+    margin: 0;
+}
+    nav{
+        flex-direction: column;
+    }
+#Bannière{
+    margin: 0
+}
+    article{
+        flex-wrap: wrap;        
+    }
+
+    .Pub{
+        width: 50%;
+        margin: 0;       
+    }
+    .Pub img{
+        padding: 0;
+    }
+
+    footer{
+        flex-wrap: wrap;
+    }
+    .Element   {
+    width: 50%;
+    box-sizing: border-box; 
+}
+    
+}

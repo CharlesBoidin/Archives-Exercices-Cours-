@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <button type="button" onclick="increment()">Incrément</button>
+    <button type="button" onclick="decrement()">Décrément</button>
+    <button type="button" onclick="chooseColor()">Couleurs</button>
+    <button type="button" onclick="recapInformations()">Input</button>
+    <div id="resultat">
+
+    </div>
+    <input id="colorpicker" type="color">
+    <input id="txtdate" type="date">
+    <input id="txt" type="text">
+    comment avez vous connu le métier de développeur ? <br><br>
+    Internet : <input class="check" type="checkbox" value="Internet">
+    Presse : <input class="check" type="checkbox" value="Presse">
+    Relation personnelle : <input class="check" type="checkbox" value="personnelle">
+    Relation professionnelle : <input class="check" type="checkbox" value="professionnelle">
+    Marché : <input class="check" type="checkbox" value="marche"><br><br>
+    <input id="txtradioy" name="radioname" type="radio" value="oui">
+    <input id="txtradion" name="radioname" type="radio" value="non">
+    <input id="txtmail" type="email">
+    <select id="textcivil">
+        <option value="Mr">Monsieur</option>
+        <option value="Mme">Madame</option>
+    </select>
+    <script>
+        function recapInformations(){
+            console.log(document.getElementById('txtdate').value);
+            console.log(document.getElementById('txt').value);
+            // console.log(document.getElementById('txtcheck').value);
+            alert(document.getElementById('txtradioy').checked);
+            console.log(document.getElementById('txtradioy').value);
+            console.log(document.getElementById('txtmail').value);
+            console.log(document.getElementById('textcivil').value);
+
+            var    elements= document.getElementsByClassName('check');
+
+            console.log(elements);
+
+            for (var i=0;i<elements.length;i++)
+            {
+                if (elements[i].checked) console.log(elements[i].value)
+            }
+        };
+
+        function chooseColor(){
+            alert(document.getElementById('colorpicker').value);
+        };
+
+        function increment () {
+            document.getElementById('resultat').innerText=""
+            for (var i=1;i<10;i++){
+                console.log(i);
+                // document.getElementById('resultat').innerText=document.getElementById('resultat').innerText +i;
+                document.getElementById('resultat').innerText+=i;
+                document.getElementById('resultat').style="background-color:"+document.getElementById('colorpicker').value ;
+                }
+            };
+
+        function decrement (){
+            var i=10
+            document.getElementById('resultat').innerText=""
+            while (i!=0)            { 
+                console.log(i);
+                document.getElementById('resultat').innerText+=i;
+                i--
+                }
+        }
+        
+
+    </script>
+</body>
+
+</html>

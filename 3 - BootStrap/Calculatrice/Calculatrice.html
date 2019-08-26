@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<script language='JavaScript'>
+
+    function touche(resultat) {
+
+        switch (resultat) {
+            case "C": document.fiche.affichage.value = 0; break;
+            case "CE": document.fiche.affichage.value = document.fiche.affichage.value.slice(0,-1); break;
+            case "Egal": document.fiche.affichage.value = eval (document.fiche.affichage.value); break;
+            default:
+                if (document.fiche.affichage.value == 0) { document.fiche.affichage.value = resultat }
+                else { document.fiche.affichage.value = document.fiche.affichage.value + resultat };
+        };
+  };
+
+</script>
+
+
+<body>
+    <form name="fiche">
+        <div class="container bg-secondary  text-center p-2">
+            <div class="row">
+                <div class="container text-center ">
+                    <h5>Ma Calculatrice Toute Simple: Calculatrice simple</h5>
+                </div>
+            </div>
+            <div class="row mt-3 ml-3 mr-3 ">
+                <div class="col"><input type="text" name="affichage" class="text-right w-100 form-control-lg" disabled>
+                </div>
+            </div>
+
+            <div class="row mt-4 ml-3 mr-3 mb-4">
+                <div class="col-8">
+                    <div class="row ">
+                        <div class="col "><button type="button" class="w-100 border border-dark btn-light"
+                                onclick="touche('7')">
+                                <h2>7</h2>
+                            </button></div>
+                        <div class="col "><button type="button" class="w-100 border border-dark btn-light"
+                                onclick="touche('8')">
+                                <h2>8</h2>
+                            </button></div>
+                        <div class="col "><button type="button" class="w-100 border border-dark btn-light"
+                                onclick="touche('9')">
+                                <h2>9</h2>
+                            </button></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col "><button type="button" class="w-100 border border-dark btn-light "
+                                onclick="touche('4')">
+                                <h2>4</h2>
+                            </button></div>
+                        <div class="col "><button type="button" class="w-100 border border-dark btn-light "
+                                onclick="touche('5')">
+                                <h2>5</h2>
+                            </button></div>
+                        <div class="col "><button type="button" class="w-100 border border-dark btn-light "
+                                onclick="touche('6')">
+                                <h2>6</h2>
+                            </button></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col "><button type="button" class="w-100 border border-dark btn-light "
+                                onclick="touche('1')">
+                                <h2>1</h2>
+                            </button></div>
+                        <div class="col "><button type="button" class="w-100 border border-dark btn-light "
+                                onclick="touche('2')">
+                                <h2>2</h2>
+                            </button></div>
+                        <div class="col "><button type="button" class="w-100 border border-dark btn-light "
+                                onclick="touche('3')">
+                                <h2>3</h2>
+                            </button></div>
+                    </div>
+                    <div class="row mt-3 ">
+                        <div class="col-8 "><button type="button" class="w-100 border border-dark btn-light "
+                                onclick="touche('0')">
+                                <h2>0</h2>
+                            </button></div>
+                        <div class="col-4 "><button type="button" class="w-100 border border-dark btn-light "
+                                onclick="touche('.')">
+                                <h2>.</h2>
+                            </button></div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="row  ">
+                        <div class="col "><button type="button" class="w-100 border border-dark btn-primary "
+                                onclick="touche('CE')">
+                                <h2>CE</h2>
+                            </button></div>
+                        <div class="col "><button type="button" class="w-100 border border-dark btn-danger "
+                                onclick="touche('C')">
+                                <h2>C</h2>
+                            </button></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col "><button type="button" class="w-100 border border-dark btn-light"
+                                onclick="touche('/')">
+                                <h2>/</h2>
+                            </button></div>
+                        <div class="col "><button type="button" class="w-100 border border-dark btn-light"
+                                onclick="touche('*')">
+                                <h2>*</h2>
+                            </button></div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <div class="row">
+
+                                <div class="col "><button type="button" class="w-100 border border-dark btn-light"
+                                        onclick="touche('-')">
+                                        <h2>-</h2>
+                                    </button></div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col"><button type="button" class="w-100 border border-dark btn-warning"
+                                        onclick="touche('Egal')">
+                                        <h2>=</h2>
+                                    </button></div>
+                            </div>
+                        </div>
+                        <div class="col-6 ">
+                            <button type="button" class="w-100 h-100 border border-dark btn-info" onclick="touche('+')">
+                                <h2>+</h2>
+                            </button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+
+</html>

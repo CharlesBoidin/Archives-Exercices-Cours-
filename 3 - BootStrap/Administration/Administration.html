@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/css/mdb.min.css" rel="stylesheet">
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+
+    <div class="container ">
+        <header>
+
+            <div class="container p-0 mb-2 clearfix ">
+                <img src="profile.png" class="rounded-circle border border-dark float-right" height="50">
+
+            </div>
+
+
+            <div class="container  bg-dark">
+                <div class="row ">
+                    <div class="col-6 col-md-2 p-0 ">
+                        <img src="logo.jpg" class="border border-dark" height="100">
+                    </div>
+
+                    <div class="col-6 cp  my-auto ml-auto ">
+                        <h4 class="text-light  my-auto text-right">Bienvenue Admin.</h4>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <h3 class="text-center m-3">Liste des produits</h3>
+
+      
+
+        
+
+        <table class="table table-bordered table-responsive ">
+
+            <thead class="thead-dark">
+                <tr class="w-100">
+                    <th class="col-md-6 col-3" >Nom</th>
+                    <th class="col-md-6 col-3">Catégorie</th>
+                    <th class="col-4"> Action</th>
+                </tr>
+            </thead>
+            <tr>
+                <td class="align-middle">Chemise</td>
+                <td class="align-middle">V. Homme</td>
+                <td class="align-middle p-0">
+                    <div class="dropdown">
+                        <button class="btn  btn-secondary dropdown-toggle p-1 type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Actions
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#"><button type="button" class="btn btn-primary"
+                                    data-toggle="modal" data-target="#Edition"> Éditer </button></a>
+                            <a class="dropdown-item" href="#"><button type="button" class="btn btn-primary"
+                                    data-toggle="modal" data-target="#Supprimer"> Supprimer </button></a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="align-middle">Pantalon</td>
+                <td class="align-middle">V. Femme</td>
+                <td class="align-middle p-0">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle p-1" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Actions
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#"><button type="button" class="btn btn-primary"
+                                    data-toggle="modal" data-target="#Edition"> Éditer </button></a>
+                            <a class="dropdown-item" href="#"><button type="button" class="btn btn-primary"
+                                    data-toggle="modal" data-target="#Supprimer"> Supprimer </button></a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+
+    <!-- Modal boutton éditer -->
+    <div class="modal fade" id="Edition" tabindex="-1" role="dialog" aria-labelledby="EditionLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="EditionLabel">Voulez vous éditer ?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-2">
+                    <div class="container">
+                        <form>
+                            <div class="row form-group">
+                                <label for="Nom" class="col-3">Nom : </label>
+                                <input id="Nom" class="col-9" placeholder="Nom de l'objet">
+                            </div>
+                            <div class="row form-group">
+                                <label for="Cat" class="col-3">Catégorie : </label>
+                                <select id="Cat" class="col-9" >
+                                    <option>V. Homme</option>
+                                    <option>V. Femme</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i
+                            class="fa fa-check"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal boutton éditer -->
+
+    <!-- Modal boutton supprimer -->
+    <div class="modal fade" id="Supprimer" tabindex="-1" role="dialog" aria-labelledby="SupprimerLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="SupprimerLabel">Êtes vous sûr ?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i>
+                    </button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i
+                            class="fa fa-check"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

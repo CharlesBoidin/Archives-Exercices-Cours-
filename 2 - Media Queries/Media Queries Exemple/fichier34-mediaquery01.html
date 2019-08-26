@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>media query</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: red;
+        }
+
+        #pbig,
+        #plittle,
+        #pnorm {
+            display: none;
+        }
+
+
+        #plittle {
+            display: block;
+        }
+
+
+        @media (min-width: 800px) {
+            body {
+                background-color: blue;
+            }
+
+            #pbig {
+                display: block;
+            }
+
+            #plittle {
+                display: none;
+            }
+
+        }
+
+
+        @media (max-width: 800px) and (min-width:400px) {
+            body {
+                background-color: green;
+            }
+
+            #pbig {
+                display: none;
+            }
+
+            #plittle {
+                display: none;
+
+            }
+
+            #pnorm {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="pnorm">
+        <h2>Contenu visible en taille normal</h2>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas ad dolorem obcaecati neque atque hic ratione iure
+        saepe ipsa harum facere, temporibus nemo. Est, repudiandae!
+        Minima cum esse ad incidunt nostrum autem tenetur corporis blanditiis labore, earum explicabo praesentium
+        dignissimos distinctio velit eligendi laboriosam fugiat repellendus dicta saepe voluptate. Error.
+        Eum, porro, accusamus nulla repudiandae error eveniet deleniti labore, voluptates maxime consequatur eius
+        necessitatibus ad rem magnam tempore nostrum perferendis. Perferendis eaque sunt eligendi cum.
+        Aspernatur fugiat repellendus natus soluta id temporibus! Accusantium non tempore hic, quaerat blanditiis autem
+        ullam veniam doloribus consequuntur vitae voluptate ipsa, delectus modi rerum officia.
+
+        Quas consequuntur quia ipsum facere distinctio harum recusandae facilis tempora repellat praesentium ullam
+        omnis, illum cum iure modi nobis culpa? Quaerat quo nesciunt sequi architecto?
+    </div>
+    <div id="pbig">
+        <h2>Contenu visible uniquement sur grand ecran</h2>
+        <img src="./img/soleil.jpg" alt="" width="250" height="250"><br>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+            <li>item5</li>
+            <li>item6</li>
+        </ul>
+    </div>
+    <div id="plittle">
+        <h2>TAbleau visible pour les smartphones</h2>
+        <table border="1" width="240">
+            <tr>
+                <td>A1</td>
+                <td>A2</td>
+                <td>A3</td>
+            </tr>
+            <tr>
+                <td>B1</td>
+                <td>B2</td>
+                <td>B3</td>
+            </tr>
+            <tr>
+                <td>C1</td>
+                <td>C2</td>
+                <td>C3</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

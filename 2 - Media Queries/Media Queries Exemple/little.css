@@ -1,0 +1,49 @@
+/* General */
+*,html{margin: 0;
+    padding: 0;}
+Body{
+    background-color: rgb(193, 193, 193)}
+
+/* En-Tête */
+header{
+    border-bottom: 1px solid black;
+    text-align: center;
+    color :green;
+    padding: 5px}
+
+/* Milieu */
+nav{
+    font-size: 25px;
+    background-color: rgb(123, 123, 123);
+border-bottom: 1px solid black;}
+nav li{
+    display: inline;
+    padding: 0 0 0 8px;}
+nav a{
+    text-decoration: none;
+    color: black}
+
+#Texte{
+    text-align: justify;
+    margin: 8px 8px 8px 8px}
+
+#Pub{
+    display: none;}
+
+
+aside{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-top: 1px solid black;}
+aside div{
+    margin: 20px}
+aside img{
+    height:150px;}
+
+/* Pied de Page */
+footer{
+    border-top: 1px solid black;
+    text-align: center;
+    color :yellow;
+    padding: 5px}

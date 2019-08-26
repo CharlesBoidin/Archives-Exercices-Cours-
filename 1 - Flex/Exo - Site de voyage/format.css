@@ -1,0 +1,243 @@
+/* Définition des polices personnalisées */
+
+@font-face
+{
+    font-family: 'BallparkWeiner';
+    src: url('polices/ballpark.eot');
+    src: url('polices/ballpark.eot?#iefix') format('embedded-opentype'),
+         url('polices/ballpark.woff') format('woff'),
+         url('polices/ballpark.ttf') format('truetype'),
+         url('polices/ballpark.svg#BallparkWeiner') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face
+{
+    font-family: 'Dayrom';
+    src: url('.../polices/dayrom.eot');
+    src: url('polices/dayrom.eot?#iefix') format('embedded-opentype'),
+         url('polices/dayrom.woff') format('woff'),
+         url('polices/dayrom.ttf') format('truetype'),
+         url('polices/dayrom.svg#Dayrom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Style pricipale  */
+
+body
+{
+    background: url('images/fond_jaune.png');
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #181818;
+    width: 900px;
+    margin: auto;
+}
+section h1, footer h1, nav a
+{
+    font-family: Dayrom, serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0
+}
+
+/* header */
+
+header{
+    background: url('images/separateur.png') repeat-x bottom;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+#titre_principal{
+    display: flex;
+    flex-direction: column;
+}
+#logo{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin: 0
+}
+
+#logo img{
+    width: 59px;
+    height: 60px;
+}
+header h1{
+    font-family: 'BallparkWeiner', serif;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 0 10px;
+}
+header h2{
+    font-family: Dayrom, serif;
+    font-size: 1.1em;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+/* Navigation */
+
+nav li{
+    display: inline;
+    margin-right: 15px;
+}
+nav a{
+    font-size: 1.3em;
+    color: #181818;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+nav a:hover{
+    color: #760001;
+    border-bottom: 3px solid #760001;
+}
+
+/* Bannière */
+
+#Bannière{
+    background: url('images/sanfrancisco.jpg') no-repeat;
+    position: relative;
+    margin: 15px 0 25px 0;
+    height: 200px;
+    border-radius: 0 0 5px 5px;   
+    box-shadow: 0px 4px 4px #1c1a19;; 
+}
+#banniere_description{
+    
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    height: 33px;
+    box-sizing: border-box ;
+    padding: 5px;
+    background-color: rgba(24, 24, 24, 0.8);
+    border-radius: 0px 0px 5px 5px;
+    font-size: 0.8em;
+    color: white;
+}
+.bouton_rouge{
+    width: 90px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: url('images/fond_degraderouge.png') repeat-x;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Section */
+
+Section{
+    display: flex;
+    margin-bottom: 20px;}
+article, aside{
+    text-align: justify;}
+article{
+    margin-right: 20px;
+    flex: 3;}
+article p{
+    font-size: 0.8em;}
+.ico_categorie{
+    vertical-align: middle;
+    margin-right: 8px;}
+aside{    
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1.2;
+    justify-content: center;
+    background-color: #706b64;
+    padding: 10px 10px 0 10px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    color: white;}
+aside p{ 
+    margin :5px}
+ #fleche_bulle{
+    position: absolute;
+    top: 100px;
+    left: -12px;}
+
+/* Footer */
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    background:  url('images/ico_top.png') no-repeat top center, url('images/separateur.png') repeat-x top, url('images/ombre.png') repeat-x top;
+    padding-top: 25px;}
+footer p, footer ul{
+    font-size: 0.8em;}
+footer h1{
+    font-size: 1.1em;}
+#tweet{
+    width: 28%;}
+#mes_photos{
+    width: 35%;}
+#mes_photos img{
+    border: 1px solid black;
+    margin-right: 2px}
+#mes_amis{
+    width :31%;}
+#listes_amis{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;}
+ #mes_amis ul{
+    list-style-image: url('images/ico_liensexterne.png');
+    padding-left: 2px;}
+#mes_amis a{
+    text-decoration: none;
+    color: #760001;}
+
+    /* Petit Ecran */
+
+    @media (max-width: 1024px)
+    {
+        body{
+            width: auto
+        }
+
+        nav{
+            width: auto;
+            text-align: left;
+        }
+
+        nav li{
+            display: flex;
+            flex-direction: column;
+        }
+
+        #Bannière{
+            display: none;
+        }
+        
+        section    {
+            flex-direction: column        }
+
+        aside{
+            display: unset;
+            box-sizing: border-box
+        }
+        #fleche_bulle{
+            display: none;
+         }
+         #Photo_Zozor{
+             float: right;
+             /* width: 110px; */
+             margin: 0 0  0 15px
+         }
+
+         aside p:last-child
+         {
+             text-align: center;
+         }
+
+    }

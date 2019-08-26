@@ -1,0 +1,25 @@
+#main{
+    width: 1150px;
+    margin: 0 auto;
+    background-color: #c2c2c2;
+}
+
+#content{
+    width: 50%;
+}
+#header h1{
+    color:red;
+    font-size: 32px;
+}
+#footer h2{
+    color:green;
+    font-size: 32px;  
+}
+#rightpub{
+    display: block;
+    float: right;
+    width: 10%;
+}
+#rightm{
+    width: 10%;
+}

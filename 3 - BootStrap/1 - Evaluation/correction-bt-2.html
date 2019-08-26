@@ -1,0 +1,260 @@
+    <!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .form-control {
+            border-radius: 0 !important
+        }
+
+        .card-bleu {
+            background: #314D75;
+            color: #FFF; 
+        }
+
+        .btn-primary {
+            border-radius: 0 !important; 
+            background: #314D75;
+            color: #FFF; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <form name="assuranceForm">
+            <div class="card">
+                <div class="card-header">
+                    Personnes à assurer
+                </div>
+                <div class="card-body">
+                    <h6>Vous / Assuré 1</h6>
+                    <div class="row">
+                        <div class="form-group col-md-2">
+                            <select name="civilite" class="form-control" required>
+                                <option value="">Civilité *</option>
+                                <option value="Mr">Mr</option>
+                                <option value="Mme">Mme</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-5">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" required
+                                placeholder="Nom *">
+                        </div>
+
+                        <div class="form-group col-md-5">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" required
+                                placeholder="Prenom *">
+                        </div>
+
+                        <label class="col-md-12 text-muted">
+                            Date de naissance : 12/12/1985
+                        </label>
+
+                        <div class="col-md-5">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                </div>
+                                <input type="email" class="form-control" placeholder="Email *" aria-label="Username"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                            <small class="text-secondary d-block mb-3">( Pour y recevoir un email de confirmation
+                                )</small>
+
+                        </div>
+
+                        <div class="form-group col-md-5">
+                            <input type="tel" class="form-control" id="exampleFormControlInput1" required
+                                placeholder="06 12 34 56 78">
+                        </div>
+
+                        <div class="form-group col-md-5">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" required
+                                placeholder="Adresse*">
+                            <small class="text-secondary d-block mb-0">( Pour y recevoir votre carte assuré )</small>
+                        </div>
+
+                        <div class="form-group col-md-5">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" required
+                                placeholder="Ville*">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" required
+                                placeholder="C. Postal*">
+                        </div>
+
+                        <div class="form-group col-md-4 ">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" required
+                                placeholder="Pays*">
+                        </div>
+
+                        <div class="form-group  col-md-6">
+                            <div class="input-group mb-3">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
+                                    <label class="custom-file-label" for="inputGroupFile02"
+                                        aria-describedby="inputGroupFileAddon02">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mt-3 mb-3">
+                <div class="card-header">
+                    Mode de paiement
+                </div>
+                <div class="card-body">
+                    <h6>Veuillez sélectioner un mode de paiement</h6>
+
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header py-0 card-bleu" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link text-white" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <input type="radio" name="typepaiement">
+                                        Par carte bancaire / Visa
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="formGroupExampleInput">Type de carte de crédit</label>
+                                            <select class="form-control">
+                                                <option>Sélectionner un type</option>
+                                                <option>Master</option>
+                                                <option>Visa</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-md-5">
+                                            <label for="formGroupExampleInput">N° de carte de crédit</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">
+                                                        <i class="fa fa-lock" aria-hidden="true"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="email" class="form-control" aria-label="Username"
+                                                    aria-describedby="basic-addon1">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label for="formGroupExampleInput">Date d'expiration</label>
+                                            <select class="form-control">
+                                                <option>Mois</option>
+                                                <option>Janvier</option>
+                                                <option>Février</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-md-3">
+                                            <label for="formGroupExampleInput">&nbsp;</label>
+                                            <select class="form-control">
+                                                <option>Année</option>
+                                                <option>2019</option> 
+                                                <option>2020</option> 
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="alert alert-success p-3">
+                                        <div class="row justify-content-around">
+                                            <div class="col-md-3">
+                                                <img src="comodo-secure-icon.png" height="50" class="d-block m-auto">
+                                            </div>
+
+                                            <div class="col-md-9">
+                                                <ul>
+                                                    <li>Nous utilisons une transmission cryptée et sécurisée</li>
+                                                    <li>Nous protégeons vos informations personnelles</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header py-0 card-bleu" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <input type="radio" name="typepaiement">
+                                        Virement bancaire
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>
+                                        Veuillez effectuer un Virement sur le RIB : 4215841 841587 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="font-weight-bold p-2">
+                        Vous recevrez votre carte dès réception de votre paiement..
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    Accepter les conditions
+                </div>
+
+                <div class="card-body">
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">J'accepte les conditions..</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary float-right">Valider ma demande</button>
+                </div>
+            </div>
+                    
+        </form>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

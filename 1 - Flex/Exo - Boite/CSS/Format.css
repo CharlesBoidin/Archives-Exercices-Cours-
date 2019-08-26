@@ -1,0 +1,95 @@
+/* Grand Bloc */
+body{
+    width: 420px ;
+    height: 420px ;
+    box-sizing: border-box;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+/* Blocs Rouges  */
+.Element{
+    width : 200px;
+    height: 200px;
+    box-sizing: border-box;
+    border: 1px solid red;
+    display: flex;
+}
+
+/* Position à l'intérieur du bloc Haut Droite */
+.Element:nth-child(2){
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-end;
+}
+
+/* Position à l'intérieur du bloc Bas Gauche */
+.Element:nth-child(3){
+    flex-wrap: wrap;
+    justify-content: space-around;
+ 
+}
+
+.Element:nth-child(3)  > .Block:nth-child(1){
+    align-self: end ;
+}
+
+/* Position à l'intérieur du bloc Bas Droite */
+.Element:nth-child(4){
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Element:nth-child(4)> .Block:nth-child(3){
+    align-self: end ;
+}
+
+/* Petits Blocs */
+.Block{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    margin: 5px;
+/* Centrer le texte */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Modifier l'ordre des petits blocs
+pour les trois derniers blocs rouges */
+.Element:nth-child(n+2)> .Block:nth-child(1){
+    order: 3;
+}
+.Element:nth-child(n+2)> .Block:nth-child(2){
+    order: 2;
+    align-self: center ;
+}
+.Element:nth-child(n+2)> .Block:nth-child(3){
+    order: 1;
+}
+
+/* Etirer le petit bloc 2
+pour le troisième bloc rouge */
+#b32{
+    height: unset;
+}
+
+.Element:nth-child(3)> .Block:nth-child(2){
+    align-self: stretch ;
+}
+
+/* Etirer le petit bloc 2
+pour le quatrième bloc rouge */
+#b42{
+    width: unset;
+}
+
+.Element:nth-child(4)> .Block:nth-child(2){
+    align-self: stretch ;
+}

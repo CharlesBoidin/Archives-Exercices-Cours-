@@ -1,0 +1,28 @@
+<html>
+<head><title> Si... Alors... Sinon... </title></head>
+<script language="JavaScript"> 
+function verifier()
+{ if (document.fiche.nom.value=='')
+     { alert('Saisissez le nom ! ');
+     }
+     else
+     { if (document.fiche.prenom.value=='')
+          { alert('Saisissez le prénom ! ');
+          }
+          else
+          { if (document.fiche.age.value=='') { alert('Saisissez l\'âge ! '); }
+               else               { alert('Merci ' + document.fiche.prenom.value);};
+          };
+     };
+};
+</script>
+<body> 
+<form name="fiche">
+Nom    : <input type="text" name="nom"    value="" size="24">
+Prénom : <input type="text" name="prenom" value="" size="24">
+Age    : <input type="text" name="age"    value="" size="24">
+<input type="button" value="Enregister"   onClick="verifier()">
+<input type="reset"  value="Annuler">
+</form>
+</body>
+</html>

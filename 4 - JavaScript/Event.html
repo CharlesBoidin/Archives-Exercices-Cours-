@@ -1,0 +1,39 @@
+<html>
+	<head>
+	
+	</head>
+	<body>
+		<div id="zone_prix"></div>
+		
+		<div id="dialog" style="display:none">Tu veux bien mettre le code de ta carte bleue</div>
+	
+		<script type="text/javascript">
+			function openPage() {
+				window.open('http://www.afpa.fr','_blank');
+			}
+		
+			window.onload=function() {
+			
+				//
+				setTimeout(openPage, 5000); 
+			
+			    var nouvelElement=document.createElement('input');
+				nouvelElement.addEventListener('keypress', (event) => {
+					if (event.keyCode==13) {
+						var nouvelElement=document.createElement('input');
+						document.getElementById('zone_prix').appendChild(nouvelElement);
+					}
+					
+				  
+				});
+				
+				nouvelElement.addEventListener('mouseover', (event) => {
+					//window.open('http://www.afpa.fr','_blank');
+					document.getElementById('dialog').style="display:block";
+				  
+				});
+				document.getElementById('zone_prix').appendChild(nouvelElement);
+			};
+		</script>
+	</body>
+</html>

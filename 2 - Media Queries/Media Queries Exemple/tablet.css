@@ -1,0 +1,24 @@
+#main{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #c2c2c2;
+}
+#header h1{
+    color:green;
+    font-size: 24px;
+}
+#footer h2{
+    color:yellow;
+    font-size: 32px;  
+}
+
+#leftm, #content, #rightm{
+    float: none;
+    width: 100%;
+}
+#leftm ul li{
+    display: inline-block
+}
+#rightm p {
+    display: inline-block;
+}

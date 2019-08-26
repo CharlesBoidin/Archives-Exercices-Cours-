@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>display_inline ou block</title>
+    <style>
+        p {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid red;
+            background-color: lightgray;
+        }
+
+        li {
+            padding: 5px;
+            border: 1px solid green;
+            background-color: darkgray;
+            width: 200px;
+            height: 100px;
+            margin: 10px 10px;
+            padding: 10px 10px;
+            /* display: inline-block; */
+        }
+
+        .myLI a {
+            color: orange;
+        }
+
+        .p2 {
+            display: default;
+        }
+    </style>
+</head>
+
+<body>
+    <p>paragraphe 1: <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, esse?
+        Voluptatum esse  officiis porro voluptas reprehenderit cupiditate facere odio!
+        Ducimus mollitia error voluptate earum vel sit, iusto ea quasi.</p>
+    <p class="p2">paragraphe 2: <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, esse?
+        Voluptatum esse beatae officiis porro voluptas reprehenderit cupiditate facere odio!
+        Ducimus mollitia error voluptate earum vel sit, iusto ea quasi.</p>
+    <p>paragraphe 3: <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, esse?
+        Voluptatum esse beatae officiis porro voluptas reprehenderit cupiditate facere odio!
+        Ducimus mollitia error voluptate earum vel sit, iusto ea quasi.</p>
+    <div>
+        <ul>
+            <li><a href="#">item un</a></li>
+            <li><a href="#">item deux</a></li>
+            <li class="myLI"><a href="#">item trois</a></li>
+            <li><a href="#">item quatre</a></li>
+
+        </ul>
+        <p>paragraphe 4: <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+            Unde voluptatum odit, soluta modi dolores officia repellat! <br>
+            Earum facilis repellendus aut cupiditate dolorem asperiores natus. <br>
+            Quos, tenetur eligendi consequuntur error labore maxime eaque!</p>
+    </div>
+</body>
+
+</html>

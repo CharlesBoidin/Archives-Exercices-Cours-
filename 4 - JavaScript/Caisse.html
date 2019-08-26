@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+
+ <body>
+     Prix 1 :   <input class="prix" type="number" value="0"> <br>
+     Prix 2 :   <input class="prix" type="number" value="0"> <br>
+     Prix 3 :   <input class="prix" type="number" value="0"> <br>
+     Prix 4 :   <input class="prix" type="number" value="0"> <br>
+     Prix 5 :   <input class="prix" type="number" value="0"> <br>     
+     Total :    <input id="total" type="number"disabled> <br>
+     <button type="button" onclick="SommeTotal()">Calculer la somme</button><br>
+     Reçu :     <input id="receipt" type="number" onchange="SommeRendu()"> <br>
+     A rendre : <input id="rendre" type="number"disabled> <br>
+
+
+    <script type="text/JavaScript">
+
+    function SommeTotal() {
+
+        document.getElementById('total').value=0;
+    
+        var Prices = document.getElementsByClassName('prix')
+        var total  = 0 
+    
+        for (var i=0;i<Prices.length;i++)
+        {   total += "+" +Prices[i].value;
+            document.getElementById('total').value= eval(total)  }   
+        };
+
+    function SommeRendu () { 
+    
+        var Reste = document.getElementById('receipt').value +"-"+ document.getElementById('total').value;
+        Reste = eval(Reste)
+
+        if (Reste<0) { alert("  Il vous manque " + eval(-Reste) + " €  ") }
+        else {document.getElementById('rendre').value= eval(Reste)}
+
+        var ValeurDevise = [ 50, 10, 5, 1];
+        var TypeDevise        
+        var Monnaie = ""
+        var Resultat = ""
+        var Reste = document.getElementById('rendre').value   
+
+        for (var i=0; i<ValeurDevise.length; i++)
+        {  
+            if (ValeurDevise[i]==1) {TypeDevise=" pièces "}
+            else {TypeDevise=" billets "}
+
+            Monnaie = Math.floor(Reste/ValeurDevise[i])
+            Reste = Math.floor(Reste%ValeurDevise[i])
+            if (Monnaie!=0) {Resultat += Monnaie + TypeDevise + "de " +ValeurDevise[i] +" €; "}
+        }
+
+        alert("Il vous faut rendre : " + Resultat)
+    } 
+    </script>
+ </body>
+</html>

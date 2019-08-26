@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>box-s</title>
+    <style>
+        *, html {
+            padding: 0;
+            margin: 0;
+        }
+        .labox {
+            background-color: green;
+            width: 300px;
+            height: 100px;
+            text-align: center;
+            border-style: solid;
+            border-color:red;
+        }
+
+        .v20 {
+            border-width: 20px;
+            padding: 20px;
+        }
+
+        .V10 {
+            border-width: 10px;
+            padding: 10px;
+        }
+        .bs{
+            border-color: blue;
+        }
+        .bb{
+            box-sizing: border-box;
+        }
+        </style>
+</head>
+
+<body>
+    <div class="labox v20">d1</div>
+    <div class="labox V10">d2</div>
+    <hr>
+    <div class="labox v20 bs bb">d3</div>
+    <div class="labox V10 bs bb">d4</div>
+</body>
+
+</html>

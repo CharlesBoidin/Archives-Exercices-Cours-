@@ -1,0 +1,103 @@
+/* Global */
+
+*, HTML {        
+    Margin: 0;
+    Padding:0;}
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;}
+
+/* Font */
+
+*, HTML {        
+    font-family: sans-serif;}
+
+Mark{
+    background-color: transparent;
+    color: #FF7F26}
+    
+header,footer {
+    color: white;
+    font-size: 25px;}
+nav a{
+    color: #F5FAF9;
+    text-decoration: none;  
+    margin: 0 0 0 25px}
+nav a:hover{
+    color:#FF7F26; }
+
+section{
+    font-weight: bolder;
+    font-size: 25px}
+
+/* En Tête */
+
+header{
+    width: 1600px;
+    height: 50px;
+    margin: auto;  
+    background-color: #7F7F7F;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    box-sizing: border-box;
+    padding: 0 20px}
+
+/* Section*/
+
+Section{
+    width: 1600px;
+    height: fit-content;
+    box-sizing: border-box;
+    margin: 30px auto;  
+    padding: 0 40px }
+
+fieldset{
+    border : 4px solid gray  ;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 10px
+}
+
+#gauche{
+    width: 35%;
+    margin: 0 0 20px 0
+}
+
+#nom, #mail, #tel{
+    width: 90%;
+    height: 40px;
+    margin: 7px 0 ;
+    border: 2px solid black}
+#droite{
+    width: 65%;
+    margin:}
+textarea{
+    border: 2px solid black;
+    height: 220px;
+    margin: 7px 0 ;
+width: 90%;}
+    
+#validation{
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    color: white;   
+    font-size: 20px;}
+
+
+/* Pied de Page */
+
+footer{  
+    width: 1600px;
+    height: 50px;
+    margin: auto;  
+    background-color: #7F7F7F;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;}

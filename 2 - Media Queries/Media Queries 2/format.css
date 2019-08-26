@@ -1,0 +1,217 @@
+/* General  */
+
+*, html{
+    margin: 0
+}
+#Page{
+    background-color: #17223b;
+    color: #ff6768;  
+}
+
+div, header, footer, article, aside{
+    background-color: #263859
+}
+
+/* Font */
+
+Body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+h2{
+    font-size: 20px
+}
+h3{
+    font-size: 14px;
+}
+
+/* Header & Footer*/
+header, footer  {
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid #6b778d
+}
+
+/* Section 1 */
+
+#Un{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between
+}
+
+.Element{
+    width: 32.5%;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid #6b778d
+}
+
+/* Section 2 */
+
+#Deux{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between
+}
+
+article, aside{
+    border: 1px solid #6b778d
+}
+article{
+    text-align: justify;
+    padding: 5px
+}
+
+
+/* section 3 */
+
+#Trois{
+    margin: 10px;
+    background-color: #17223b;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Menu, #Pub,#Article2, #Article2 img{
+    border: 1px solid #6b778d;
+    box-sizing: border-box;
+    padding: 5px
+  }
+#Menu{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 10px 0 ;}
+.Menu{
+    width:100%; 
+    text-align: center;
+  } 
+#Pub{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+#Article2{
+    width: 79%;
+    text-align: justify; 
+    padding: 5px
+}
+#Article2 img{
+    float: right;
+    padding: unset;
+    margin: 0 0 0 5px
+}
+
+
+
+/* Section 4 */
+
+#Quatre{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #6b778d
+}
+
+.Liens{
+    margin: 5px;
+    text-align: justify;
+}
+
+
+/* Format Téléphone */
+@media(max-width: 480px){
+
+    *, HTML{
+        margin: 0
+    }
+
+/* Section 1 */
+
+    #Un{
+        margin: 0;
+        flex-wrap: wrap;
+        justify-content: stretch    }
+
+    .Element:nth-child(1){
+         box-sizing: border-box;
+        width: 50%;
+        }
+   .Element:nth-child(2){
+        order :-1;
+        width: 100%; 
+    }
+    .Element:nth-child(3){
+        order :-1;
+        box-sizing: border-box;
+        width: 50%;
+        
+    }
+
+/* Section 2 */
+
+#Deux{
+    margin: 0;
+    flex-direction: column-reverse;
+}
+aside{
+    text-align: center;
+}
+
+/* Section 3 */
+
+#Trois, #Menu{
+    margin: 0;
+}
+
+#Article2 img{
+    float: left;
+    margin: 0 5px 0 0;
+}
+#Article2{
+    order: -2;
+    width: 100%
+}
+
+#Menu, #Pub{
+    padding: 5px;
+    box-sizing: border-box;
+    justify-content: space-around;
+    width: 50%
+}
+#Menu{
+    height: unset;  
+    border: 1px solid #6b778d;
+    flex-direction: column;
+}
+.Menu {
+    border: unset;
+    text-align: left
+}
+
+/* Section 4 */
+
+#Quatre{
+    margin: 0;
+    flex-wrap: wrap;    
+    border: unset;
+}
+
+.Liens{
+    padding: 5px;
+    margin: 0;
+    width: 50%;
+    justify-content: justify;
+    box-sizing: border-box;
+    border: 1px solid #6b778d;
+}
+
+}   

@@ -1,0 +1,43 @@
+*,html {
+    padding : 0px;
+    margin: 0px;
+}
+body {
+    margin: 0px auto;
+    width:960px;
+    padding: 0px;
+    background-color: lightgray;
+}
+#myheader{
+    background-color: rgb(53, 233, 68);
+    padding:10px;
+    font-size: 1.5em;
+}
+
+#mymain#{
+    padding: 5px;;
+}
+
+#mymenu{
+    background-color: rgb(5, 153, 62);
+    color:white;
+    padding : 18px;
+}
+
+#mymenu ul li {
+    display: inline;
+    margin: 10px;
+}
+#mycontent{
+    background-color: rgb(13, 128, 70);
+    float:left;
+    padding : 12px;
+}
+#myfooter{
+    clear: both;
+    background-color: rgb(173, 230, 178);
+    text-align: right;
+    padding:15px;
+    font-size: 1.7em;
+}
+

@@ -1,0 +1,2 @@
+92c3fd34ea87fe572aaad5a6f99029fb
+http://api.openweathermap.org/data/2.5/weather?q=Toulouse&mode=json&appid=92c3fd34ea87fe572aaad5a6f99029fb

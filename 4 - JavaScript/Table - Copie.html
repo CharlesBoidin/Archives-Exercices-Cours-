@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<script src="jquery-3.4.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>
+ 		<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+	</head>
+
+	<body class="p-2">
+			<table id="myTable" class="table table-primary table-bordered" style="width: 100%">
+					<thead>
+						<tr>
+							<th>Nom de la ville</th>
+							<th>Température</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+				</table>
+
+		<script type="text/javascript">
+
+			$('#myTable').DataTable(
+				{"ajax":{"url": 'http://api.openweathermap.org/data/2.5/weather?q=lens&mode=json&appid=92c3fd34ea87fe572aaad5a6f99029fb&units=metric&lang=fr',
+				"dataSrc":function(json){
+				var cities=new Array();
+				for (var i=0, ien=json.length; i<ien; i++)
+				{citie[i]=new Array();
+				cities[i][0]= json[i].name}
+
+			}
+			
+				
+		}})
+
+		
+	
+			$(document).ready( function () {
+				$('#myTable').DataTable();
+			} );
+
+			
+		</script>
+	</body>
+</html>

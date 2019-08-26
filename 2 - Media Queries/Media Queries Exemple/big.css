@@ -1,0 +1,81 @@
+/* General */
+
+*,html{margin: 0;
+padding: 0;}
+body{
+background-color: black;}
+#Page{
+    /* width: 1876px; */
+    margin:  auto;
+    background-color: rgb(193, 193, 193)}
+
+h1{
+    font-size: 60px    
+}
+h2{ 
+    font-size: 40px;  
+font-weight: bolder;}
+
+/* En-Tête */
+
+header{
+    border-bottom: 5px solid black;
+    text-align: center;
+    color :red;
+    padding: 5px}
+
+
+    /* Milieu */
+section{           
+     display: flex  }
+article{
+        display: flex;
+        border: 1px solid black;}
+
+nav{
+width: 200px;
+height: max-content;
+font-size: 20px;
+background-color: rgb(123, 123, 123);
+border-bottom: 3px solid black;
+text-align: center;}
+nav li{
+    list-style: none;
+    margin: 5px 0}
+nav a{
+    font-size: 1.3em;
+    color: #181818;
+    text-decoration: none;    }
+
+#Texte{
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    margin: auto;
+    font-size: 26px ;
+    text-align: justify;
+    padding: 10px;}
+    
+
+#Pub{
+    width: 200px;
+    height: max-content;
+    font-size: 20px;
+    border: 1px solid black;
+    background-color: lightpink;
+    text-align: center;}
+#Pub li{
+    list-style: none;
+    margin: 5px 0}
+
+aside{
+    padding: 10px;
+    text-align: center}
+
+/* Pied de Page */
+
+footer{
+    border-top: 5px solid black;
+    text-align: center;
+    color :green;
+    padding: 5px}

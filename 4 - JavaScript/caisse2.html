@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Caisse Enregistreuse</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col border" id="entree">
+                <label class="h3" id="lblPrix" for="article">Choix du produit :</label>
+                <div class="row">
+                    <select class="col-11 form-control" name="article" id="article" onchange="addArticle()">
+                        <option value="">Sélectionner un article</option>
+                    </select>
+                    <button type="button" class=" col-1 btn btn-light" onclick="cacher(false)">+</button>
+                </div>
+                <div class="row">
+                    <input class="col-5" type="text" name="nomProd" id="nomProd" placeholder="nom produit" hidden>
+                    <input class="col-5" type="number" name="prixProd" id="prixProd" placeholder="prix produit" hidden>
+                    <button class="col-2 btn" id="btnValide" onclick="saveProd()" hidden>entrez</button>
+                </div>
+                <!-- <input type="number" pattern="[0-9.]" class="form-control" name="prix" id="prix" value="0"> -->
+                <!-- <button type="button" class="btn btn-success btn-block" onclick="addArticle()">Ajouter</button> -->
+            </div>
+            <div class="col border" id="recu">
+                <label class="h3" for="argRecu">Argent reçu :</label>
+                <input type="number"  class="form-control" name="argRecu" id="argRecu" value="0">
+                <!-- <button type="button" class="btn btn-primary btn-block" onclick="valider()">Valider</button> -->
+            </div>
+        </div>
+        <div class="border my-2" id="listeArticles">
+            <h2 class="text-center h1 mt-4">Liste des Articles</h2>
+        </div>
+        <div class="border">
+            <h2 class="text-center h1 pt-5">Prix Total</h2>
+            <p class="h5 text-center pt-3" id="total">0 euros</p>
+        </div>
+        <div class="border p-3 my-2" id="rendu"></div>
+        <div class="row"><button class="btn btn-danger w-50 mx-auto" type="button" onclick="location.reload()">Réinitialiser</button></div>
+    </div>
+    <script type="text/javascript">
+        var listeProduits=[
+            ['bouteille d\'eau',0.90],
+            ['paquet de chips',2.10],
+            ['balai',5.00],
+            ['ventilateur usb',2.40]
+        ]
+        function addSelect(ref,name,price){
+            document.getElementById('article').innerHTML+='<option value='+ref+'>'+name+' : '+price+' euros</option>';
+        }
+        for (var i=0;i<listeProduits.length;i++){
+            addSelect(i,listeProduits[i][0],listeProduits[i][1].toFixed(2))
+        }
+        var nbArticles=0;
+        var listePrix=new Array();
+        var prixTotal=0;
+        function addArticle(){
+            document.getElementById('rendu').innerHTML='';
+            var refProd=document.getElementById('article').value;
+            if (refProd=='') {
+                alert('Entrée invalide');
+            }else {
+                nbArticles++;
+                listePrix[nbArticles-1]=parseFloat(listeProduits[refProd][1]);
+                // console.log((document.getElementById('prix').value));
+                prixTotal+=listePrix[nbArticles-1];
+                document.getElementById('listeArticles').innerHTML+='<p class="h5 border">Article n°'+nbArticles+':'+listeProduits[refProd][0]+' : '+listePrix[nbArticles-1].toFixed(2)+' euros';
+                // document.getElementById('lblPrix').innerText='Prix de l\'article n°'+eval(nbArticles+1)+' :';
+                document.getElementById('article').value='';
+                document.getElementById('total').innerText=prixTotal.toFixed(2)+' euros';
+            }
+        }
+        function valider() {
+            var recu=parseFloat(document.getElementById('argRecu').value);
+            var listeMonnaie=[
+                [50,'Billet'],
+                [20,'Billet'],
+                [10,'Billet'],
+                [5,'Billet'],
+                [2,'Pièce'],
+                [1,'Pièce'],
+            ]
+            document.getElementById('rendu').innerHTML='';
+            if (isNaN(recu)){
+                document.getElementById('rendu').innerHTML='entrée invalide';
+            }else if (recu<prixTotal){
+                document.getElementById('rendu').innerHTML='Le Client n\a pas donné assez';
+            } else if(recu==prixTotal) {
+                document.getElementById('rendu').innerHTML='le compte est bon';
+                // location.reload();
+            } else {
+                let rest=recu-prixTotal;
+                let aff='A rendre : '+rest.toFixed(2)+' euros. Soit <br>';
+                for (var i=0;i<listeMonnaie.length;i++) {
+                    // console.log(rest);
+                    if (rest>=listeMonnaie[i][0]){
+                        aff+=Math.trunc(rest/listeMonnaie[i][0])+' '+listeMonnaie[i][1]+'(s) de '+listeMonnaie[i][0]+' euros<br>'
+                        rest=rest%listeMonnaie[i][0];
+                    }
+                }
+                if (rest>0){
+                    aff+='et '+Math.round(100*rest)+' cents';
+                }
+                document.getElementById('rendu').innerHTML=aff;
+                // location.reload();
+            }
+        }
+        // var inputPrix = document.getElementById("prix");
+        //             inputPrix.addEventListener("keyup", function(event) {
+        //                 if (event.keyCode === 13) {
+        //                 event.preventDefault();
+        //                 addArticle();
+        //                 }
+        //             });
+                    var inputRecu = document.getElementById("argRecu");
+                    inputRecu.addEventListener("keyup", function(event) {
+                        if (event.keyCode === 13) {
+                        event.preventDefault();
+                        valider();
+                        }
+                    });
+                    function cacher(bool) {
+                        document.getElementById('nomProd').hidden=bool;
+                        document.getElementById('prixProd').hidden=bool;
+                        document.getElementById('btnValide').hidden=bool;
+                }
+                    function saveProd(){
+                        let saveName=document.getElementById('nomProd').value;
+                        let savePrice=parseFloat(document.getElementById('prixProd').value).toFixed(2);
+                        if (saveName!=''&&!(isNaN(savePrice))) {
+                            var ref=listeProduits.length;
+                            listeProduits[ref]=[saveName,savePrice];
+                            addSelect(ref,saveName,savePrice);
+                        }
+                        console.log(listeProduits);
+                        cacher(true);
+                    }
+
+    </script>
+</body>
+</html>
