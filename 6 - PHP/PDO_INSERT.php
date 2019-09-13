@@ -109,7 +109,7 @@ try {
     // Préparation de la requete
     $req = $db->prepare ("INSERT INTO user ( Mail, Password, Name, LastName,Tel, Category_User_ID_Category,Entreprise_Siret_Entreprise,Adresse_Adresse_ID) 
     VALUES (:Mail,:Password,:FirstName,:Lastname,:Tel,:CatUser,:Entreprise,:AdresseUser) ");
-
+echo 'test';
     // changemnts des paramètre et controle des champs
     $req->bindParam(":Mail",$MailUser,PDO::PARAM_STR);
     $req->bindParam(":Password",$PassWordUser,PDO::PARAM_STR);
