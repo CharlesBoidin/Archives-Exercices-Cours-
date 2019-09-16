@@ -22,7 +22,7 @@ try {
     INNER JOIN categories ON products.category_id = categories.id
     WHERE products.id = :IdProduct ' );
 
-    // Paramtrage de la variable
+    // Parametrage de la variable
     $req->bindParam(":IdProduct",$idProduct,PDO::PARAM_INT);
 
     // Execution de  la réquete
