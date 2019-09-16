@@ -1,12 +1,11 @@
 <?php
 
-function connect()
+function connect($database)
 {
+
     try
     {
-        $db = new PDO ('mysql:host=localhost;dbname=products;charsert=utf8','root','');
-        
-
+        $db = new PDO ('mysql:host=localhost;dbname='.$database.';charset=utf8','root','');
         return $db;
     }
     catch (Exception $e)
@@ -14,5 +13,6 @@ function connect()
         die('Erreur :'.$e->getMessage());
     }
 }
+
 ?>
 

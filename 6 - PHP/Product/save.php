@@ -9,8 +9,8 @@ $Category = htmlspecialchars ($_POST["Category"],ENT_QUOTES);
 
     
 // Connection Serveur
-require 'Connection2.php';
-$db = connect();
+require 'Connect.php';
+$db = connect('products');
 
 
 try {

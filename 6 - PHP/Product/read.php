@@ -3,8 +3,8 @@
 $idProduct =$_GET['id'];    
     
 // Connection Serveur
-require 'Connection2.php';
-$db = connect();
+require 'Connect.php';
+$db = connect('products');
 
 try {
     // Configuration de la requète Select

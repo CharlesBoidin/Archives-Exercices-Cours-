@@ -6,8 +6,8 @@ Echo '<form action="save.php?id='.$idProduct .'" method="post" >';
 
 
 // Connection Serveur
-require 'Connection2.php';
-$db = connect();
+require 'Connect.php';
+$db = connect('products');
 
 
 try {
