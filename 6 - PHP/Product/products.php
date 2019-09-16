@@ -24,8 +24,9 @@
 		<thead class="thead-dark">
 		<tr>
 			<th scope="col">#</th>
-			<th scope="col">Description</th>
-			<th scope="col">Price</th>
+			<th scope="col"></th>
+			<th scope="col"></th>
+			<th scope="col"></th>
 			<th scope="col">Category</th>
 			<th scope="col">Actions</th>
 		</tr>
@@ -34,19 +35,23 @@
 		<tr>
 
 			<?php 
+				//Connection à la Base de Donnée
+				// lien avec votre fichier à vérifier
 				require 'Connection2.php';
 				$db = connect();
 				
 
 				try {
-					// Préparation de la requete
+					// Préparation de la requete SQL
 					$req = $db-> prepare ('SELECT products.id as IdProduct, products.name as NameProduct, products.price as PriceProduct, categories.name as Category
-					FROM products
-					INNER JOIN categories ON products.category_id = categories.id' );
+					FROM products, categories
+					Where products.category_id = categories.id' );
 
+					// Execution de la requete
 					$req->execute();
 				
-					// Solution ForEach
+					// Solution type Objet
+					// Lecture des données et traitement sous forme de tableau
 					while($data = $req->fetchObject()){
 						echo '<tr> <th>'.$data->IdProduct.'</th> <td>'.$data->NameProduct.'</td><td>'.$data->PriceProduct.'</td><td>'.$data->Category.'</td><td>  
 				
