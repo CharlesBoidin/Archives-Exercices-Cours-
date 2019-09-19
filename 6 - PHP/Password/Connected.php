@@ -1,4 +1,9 @@
 <?php
+session_start ();
+$TypeUSER = $_SESSION['TypeUser'] ;
+$Email = $_SESSION['Mail'] ;
+
+
 ?>
 <!doctype html>
 <html lang="fr">
@@ -21,6 +26,12 @@
 		<hr>
 		<div id="connected">
 			<h3>Félicitation vous êtes connecté :)</h3>
+			<h3>Vous etes <?php echo $TypeUSER; ?></h3>
+
+			<a href="admin.php"><button type="submit" class="btn col-2 btn-primary" value="Editor">Admin</button>				
+			<a href="autor.php"><button type="submit" class="btn col-2 btn-secondary" value="Editor">Autor</button>
+			<a href="editor.php"><button type="submit" class="btn col-2 btn-dark">Editor</button>
+			<a href="signit.php"><button type="submit" class="btn col-2 btn-danger">Se deconnecter</button>
 		</div>
 	</section>
 </div>
